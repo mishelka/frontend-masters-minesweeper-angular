@@ -1,0 +1,10 @@
+<table>
+  <tbody>
+    <tr *ngFor="let row of field.tiles; let r = index;">
+      <td *ngFor="let col of row; let c = index;">
+        <mines-tile [tile]="col"
+                    [field]="field"></mines-tile>
+      </td>
+    </tr>
+  </tbody>
+</table>

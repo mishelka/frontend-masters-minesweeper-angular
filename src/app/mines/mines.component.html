@@ -1,0 +1,16 @@
+<div id="container">
+  <div id="game">
+    <mines-field [field]="field"></mines-field>
+  </div>
+  <div id="win-lose" *ngIf="field.state !== gameState.PLAYING">
+    <div>
+      <h2>
+        {{field.state === gameState.SOLVED ? 'YOU WON!!' : 'YOU LOST! :('}}
+      </h2>
+      <strong id="congrats">
+        {{field.state === gameState.SOLVED ? 'CONGRATULATIONS!' : 'play again :)'}} <br>
+      </strong>
+      <button (click)="newGame()">New game</button>
+    </div>
+  </div>
+</div>
